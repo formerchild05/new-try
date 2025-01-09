@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1 th:text="${message}">This is a placeholder</h1>
+<div>
+    <img id="gif" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDlpcWhyOGU0NDdkY3d0bXN1bnFyd3FyNnMyYjIzMGxoNmpyNGJvdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uVL9KCnJDySzK/200.webp"
+         alt="gif">
+    <h1 th:text="${message}">This is a placeholder</h1>
+    <button id="but" onclick="toggle()">smt</button>
+</div>
+<script src="/js/script.js"></script>
 </body>
 </html>
