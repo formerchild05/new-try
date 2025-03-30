@@ -22,6 +22,7 @@ public class Login {
         } else {
             model.addAttribute("message", "You have failed!");
         }
-        return "LoginUI";
+        return "main";
     }
+
 }
