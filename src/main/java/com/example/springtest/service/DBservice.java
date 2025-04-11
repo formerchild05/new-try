@@ -28,4 +28,10 @@ public class DBservice {
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
+
+    public User getUsersByUsername(String username) {
+        return userRepository.findByUsername(username);
+    }
+
+
 }

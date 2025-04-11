@@ -1,14 +1,26 @@
 package com.example.springtest.service;
 
 import com.example.springtest.model.LoginRequest;
+import com.example.springtest.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class Auth {
-    public static boolean login(LoginRequest loginRequest) {
+    @Autowired
+    private DBservice dbservice;
+
+
+
+
+    public boolean login(LoginRequest loginRequest) {
         String username = loginRequest.getUsername();
         String password = loginRequest.getPassword();
-        if (username.equals("admin") && password.equals("123")) {
-            return true;
+        User user = dbservice.getUsersByUsername(username);
+
+        if (user == null) {
+            return false;
         }
-        return false;
+        return password.equals(user.getPassword());
     }
 }

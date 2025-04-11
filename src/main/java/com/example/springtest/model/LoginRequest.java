@@ -1,6 +1,5 @@
 package com.example.springtest.model;
 
-import lombok.extern.java.Log;
 
 public class LoginRequest {
     private String username;
